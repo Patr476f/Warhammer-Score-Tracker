@@ -3,6 +3,7 @@ import random
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from classes.secondaries.secondarymanager import SecondaryManager
+from classes.Managers.GameManager import GameManager
 
 class MyWidget(QtWidgets.QWidget):
     def __init__(self):
@@ -26,6 +27,11 @@ class MyWidget(QtWidgets.QWidget):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
+
+    gm = GameManager()
+    gm.show()
+
+    sys.exit(app.exec())
 
     widget = MyWidget()
     widget.resize(800, 600)
